@@ -1,0 +1,76 @@
+swagger: "2.0"
+info:
+  description: "ChurchCRM API Endpoints"
+  version: "1.0.0"
+  title: "ChurchCRM"
+  termsOfService: "http://churchcrm.io/"
+  contact:
+    email: "crossan007@gmail.com"
+  license:
+    name: "MIT"
+    url: "https://github.com/ChurchCRM/CRM/blob/master/LICENSE"
+host: "petstore.swagger.io"
+basePath: "/v2"
+tags:
+- name: "Database"
+  description: "Databse backup and restore"
+- name: "Deposits"
+  description: "Deposits"
+- name: "Events"
+  description: "Events"
+- name: "Families"
+  description: "Families"
+- name: "Groups"
+  description: "Groups"
+- name: "Issues"
+  description: "Issues" 
+- name: "Kiosks"
+  description: "Kiosks"
+- name: "Payments"
+  description: "Payments"
+- name: "Persons"
+  description: "Persons"
+- name: "Properties"
+  description: "Properties"
+- name: "Register"
+  description: "Register"
+- name: "Roles"
+  description: "Roles"
+- name: "Search"
+  description: "Search"
+- name: "SystemUpgrade"
+  description: "SystemUpgrade"
+- name: "Timerjobs"
+  description: "Timerjobs"
+schemes:
+- "http"
+
+paths:
+  /api/database/backup:
+    post:
+      tags:
+      - "Databse"
+      summary: "Begin a database backup"
+      description: ""
+      operationId: "addDatabase"
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - in: "body"
+        name: "body"
+        description: "backup parameters"
+        required: true
+        schema:
+          type: object
+          properties:
+          iArchiveType:
+            type: "integer"
+          bEncyptBackup:
+            type: boolean
+          password:
+            type: string
+      responses:
+        405:
+        description: "Invalid input"
