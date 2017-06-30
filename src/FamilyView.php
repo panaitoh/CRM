@@ -32,8 +32,8 @@ use ChurchCRM\FamilyQuery;
 use ChurchCRM\dto\SystemURLs;
 use ChurchCRM\Service\MailChimpService;
 use ChurchCRM\Service\TimelineService;
-use ChurchCRM\Utils\GeoUtils;
-use ChurchCRM\Utils\InputUtils;
+use ChurchCRM\utils\GeoUtils;
+use ChurchCRM\utils\InputUtils;
 
 $timelineService = new TimelineService();
 $mailchimp = new MailChimpService();

@@ -19,7 +19,7 @@ use ChurchCRM\PersonQuery;
 require 'Include/Config.php';
 require 'Include/Functions.php';
 
-use ChurchCRM\Utils\InputUtils;
+use ChurchCRM\utils\InputUtils;
 
 // Security: User must have Delete records permission
 // Otherwise, re-direct them to the main menu.

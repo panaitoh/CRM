@@ -21,7 +21,7 @@ require 'Include/CanvassUtilities.php';
 use ChurchCRM\dto\SystemConfig;
 use ChurchCRM\Note;
 use ChurchCRM\FamilyQuery;
-use ChurchCRM\Utils\InputUtils;
+use ChurchCRM\utils\InputUtils;
 
 //Set the page title
 $sPageTitle = gettext('Family Editor');

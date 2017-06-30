@@ -24,7 +24,7 @@ use ChurchCRM\PersonQuery;
 use ChurchCRM\dto\SystemURLs;
 use ChurchCRM\Service\MailChimpService;
 use ChurchCRM\Service\TimelineService;
-use ChurchCRM\Utils\InputUtils;
+use ChurchCRM\utils\InputUtils;
 
 $timelineService = new TimelineService();
 $mailchimp = new MailChimpService();
