@@ -25,6 +25,8 @@
 require 'Include/Config.php';
 require 'Include/Functions.php';
 
+use ChurchCRM\dto\SystemURLs;
+
 //Set the page title
 $sPageTitle = gettext('Group Listing');
 require 'Include/Header.php'; ?>
@@ -49,7 +51,8 @@ if ($_SESSION['bManageGroups']) {
 ?>
 
 </div>
-<script src="skin/js/GroupList.js" type="text/javascript"></script>
+
+<script src="<?= SystemURLs::getRootPath() ?>/skin/js/GroupList.js.php" type="text/javascript"></script>
 
 
 <?php
