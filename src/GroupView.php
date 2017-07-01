@@ -28,6 +28,8 @@ use ChurchCRM\dto\SystemConfig;
 use ChurchCRM\ListOptionQuery;
 use ChurchCRM\Utils\InputUtils;
 
+use ChurchCRM\dto\SystemURLs;
+
 //Get the GroupID out of the querystring
 $iGroupID = InputUtils::LegacyFilterInput($_GET['GroupID'], 'int');
 
@@ -517,6 +519,6 @@ require 'Include/Header.php';
                 });
               });
             </script>
-            <script src="skin/js/GroupView.js" type="text/javascript"></script>
+            <script src="<?= SystemURLs::getRootPath() ?>/skin/js/GroupView.js.php" type="text/javascript"></script>
 
             <?php require 'Include/Footer.php' ?>
