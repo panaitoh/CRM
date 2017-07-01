@@ -6955,3 +6955,8 @@ msgstr "Fonctions Panier"
 msgid "All members of this group are in the cart"
 msgstr "Tous les membres du groupe sont dans le panier"
 
+msgid "Are you sure you want to remove the"
+msgstr "Etes vous sûr de vouloir supprimer"
+
+msgid "selected group members?"
+msgstr "membre(s) sélectionné(s) ?"
