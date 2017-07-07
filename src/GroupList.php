@@ -49,7 +49,7 @@ if ($_SESSION['bManageGroups']) {
 ?>
 
 </div>
-<script src="skin/js/GroupList.js" type="text/javascript"></script>
+<script src="skin/js/GroupList.js.php" type="text/javascript"></script>
 
 
 <?php
