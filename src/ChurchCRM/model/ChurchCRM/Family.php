@@ -301,26 +301,27 @@ class Family extends BaseFamily implements iPhoto
         $this->createTimeLineNote('verify');
     }
 
-    public function getFamilyString()
+    public function getFamilyString($includeHOH=true)
     {    
-      $HoH = $this->getHeadPeople();
-      if (count($HoH) == 1)
-      {
-         return $this->getName(). ": " . $HoH[0]->getFirstName() . " - " . $this->getAddress();
-      }
-      elseif (count($HoH) > 1)
-      {
-        $HoHs = [];
-        foreach ($HoH as $person) {
-          array_push($HoHs, $person->getFirstName());
+
+        if ($includeHOH) {
+            $HoH = $this->getHeadPeople();
+
+            if (count($HoH) == 1) {
+                return $this->getName() . ": " . $HoH[0]->getFirstName() . " - " . $this->getAddress();
+            } elseif (count($HoH) > 1) {
+                $HoHs = [];
+                foreach ($HoH as $person) {
+                    array_push($HoHs, $person->getFirstName());
+                }
+
+                return $this->getName() . ": " . join(",", $HoHs) . " - " . $this->getAddress();
+            } else {
+                return $this->getName() . " " . $this->getAddress();
+            }
+        } else {
+            return $this->getName() . " " . $this->getAddress();
         }
-        
-        return $this->getName(). ": " . join(",", $HoHs) . " - " . $this->getAddress();
-      }
-      else
-      {
-        return $this->getName(). " " . $this->getAddress();
-      }
     }
 
     public function hasLatitudeAndLongitude() {
